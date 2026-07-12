@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "CsvTest": "npx playwright test --grep @LogintestwithCsv",
+    "TSObjectTest": "npx playwright test --grep @LogintestwithTSObject",
+    "JsonTest": "npx playwright test --grep @LogintestwithJson",
+    "headless": "npx playwright test"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

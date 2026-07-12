@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import {Loginpage} from '../PageObjects/Loginpage';
-import {loginData} from '../testdata/loginData';
+import {loginDataTS} from '../testdata/loginData';
 import logindata from '../testdata/loginData.json';
 import { CurrentEnv } from '../configs/env';
 import path from 'path';
@@ -15,7 +15,8 @@ const logintestData = readCSV(
 
 for (const data of logintestData) {
 
-test.only(`Login with ${data.Username}`, async ({ page }) => {
+
+test(`@LogintestwithCsv Login with ${data.Username}`, async ({ page }) => {
 
   const loginpage = new Loginpage(page);
   await loginpage.goTO(data.URL);
@@ -24,12 +25,21 @@ test.only(`Login with ${data.Username}`, async ({ page }) => {
 })
 };
 
-
-test('Invalid Login test', async ({ page }) => {
+test(`@LogintestwithJson validuser Login with ${logindata.validUser.username}`, async ({ page }) => {
 
   const loginpage = new Loginpage(page);
-  await loginpage.goTO(logindata.invalidUser.baseURL);
-  await loginpage.Invalidlogin(logindata.invalidUser.username,logindata.invalidUser.password);
+  await loginpage.goTO(logindata.validUser.baseURL);
+  await loginpage.validlogin(logindata.validUser.username, logindata.validUser.password);
+  await loginpage.verfiyPageURL();
+})
+
+
+
+test('@LogintestwithTSObject Invalid Login test', async ({ page }) => {
+
+  const loginpage = new Loginpage(page);
+  await loginpage.goTO(loginDataTS.invalidUser.baseURL);
+  await loginpage.Invalidlogin(loginDataTS.invalidUser.username,loginDataTS.invalidUser.password);
 
 });
 

@@ -1,4 +1,4 @@
-export const loginData = {
+export const loginDataTS = {
  validUser : {
     username: 'standard_user',
     password: 'secret_sauce',
