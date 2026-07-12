@@ -1,0 +1,31 @@
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="5.208133">
+<testsuite name="login.spec.ts" timestamp="2026-07-12T10:17:10.980Z" hostname="" tests="3" failures="0" skipped="0" time="10.13" errors="0">
+<testcase name="@LogintestwithCsv Login with standard_user" classname="login.spec.ts" time="3.522">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-standard-user\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-standard-user\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="@LogintestwithCsv Login with locked_out_user" classname="login.spec.ts" time="3.062">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-locked-out-user\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-locked-out-user\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="@LogintestwithCsv Login with problem_user" classname="login.spec.ts" time="3.546">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-problem-user\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-problem-user\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
