@@ -17,7 +17,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-            bat "npm run %SCRIPT%"
+            bat "npm run %SCRIPT% --workers=%WORKERS%"
             }
         }
     }
