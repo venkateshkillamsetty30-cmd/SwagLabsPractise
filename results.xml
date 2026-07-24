@@ -1,29 +1,87 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="5.208133">
-<testsuite name="login.spec.ts" timestamp="2026-07-12T10:17:10.980Z" hostname="" tests="3" failures="0" skipped="0" time="10.13" errors="0">
-<testcase name="@LogintestwithCsv Login with standard_user" classname="login.spec.ts" time="3.522">
+<testsuites id="" name="" tests="9" failures="0" skipped="0" errors="0" time="27.322338">
+<testsuite name="login.spec.ts" timestamp="2026-07-24T06:53:54.335Z" hostname="Desktop Chrome" tests="3" failures="0" skipped="0" time="18.518" errors="0">
+<testcase name="@LogintestwithCsv Login with standard_user" classname="login.spec.ts" time="6.551">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-standard-user\test-finished-1.png]]
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-standard-user-Desktop-Chrome\test-finished-1.png]]
 
-[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-standard-user\trace.zip]]
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-standard-user-Desktop-Chrome\trace.zip]]
 ]]>
 </system-out>
 </testcase>
-<testcase name="@LogintestwithCsv Login with locked_out_user" classname="login.spec.ts" time="3.062">
+<testcase name="@LogintestwithCsv Login with locked_out_user" classname="login.spec.ts" time="5.769">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-locked-out-user\test-finished-1.png]]
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-locked-out-user-Desktop-Chrome\test-finished-1.png]]
 
-[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-locked-out-user\trace.zip]]
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-locked-out-user-Desktop-Chrome\trace.zip]]
 ]]>
 </system-out>
 </testcase>
-<testcase name="@LogintestwithCsv Login with problem_user" classname="login.spec.ts" time="3.546">
+<testcase name="@LogintestwithCsv Login with problem_user" classname="login.spec.ts" time="6.198">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-problem-user\test-finished-1.png]]
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-problem-user-Desktop-Chrome\test-finished-1.png]]
 
-[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-problem-user\trace.zip]]
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-problem-user-Desktop-Chrome\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="login.spec.ts" timestamp="2026-07-24T06:53:54.335Z" hostname="Desktop Firefox" tests="3" failures="0" skipped="0" time="48.867" errors="0">
+<testcase name="@LogintestwithCsv Login with standard_user" classname="login.spec.ts" time="6.69">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-standard-user-Desktop-Firefox\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-standard-user-Desktop-Firefox\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="@LogintestwithCsv Login with locked_out_user" classname="login.spec.ts" time="22.275">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-locked-out-user-Desktop-Firefox\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-locked-out-user-Desktop-Firefox\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="@LogintestwithCsv Login with problem_user" classname="login.spec.ts" time="19.902">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-problem-user-Desktop-Firefox\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-problem-user-Desktop-Firefox\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="login.spec.ts" timestamp="2026-07-24T06:53:54.335Z" hostname="Desktop Safari" tests="3" failures="0" skipped="0" time="13.261" errors="0">
+<testcase name="@LogintestwithCsv Login with standard_user" classname="login.spec.ts" time="4.562">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-standard-user-Desktop-Safari\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-standard-user-Desktop-Safari\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="@LogintestwithCsv Login with locked_out_user" classname="login.spec.ts" time="4.332">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-locked-out-user-Desktop-Safari\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-locked-out-user-Desktop-Safari\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="@LogintestwithCsv Login with problem_user" classname="login.spec.ts" time="4.367">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-problem-user-Desktop-Safari\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-problem-user-Desktop-Safari\trace.zip]]
 ]]>
 </system-out>
 </testcase>

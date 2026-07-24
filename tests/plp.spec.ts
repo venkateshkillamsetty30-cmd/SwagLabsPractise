@@ -5,6 +5,4 @@ test('Add Product to Cart', async ({ loggedInPage,page }) => {
 
   const plppage = new PLPpage(page);
   await plppage.AddProducttocart();
-
-
 });
