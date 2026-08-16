@@ -11,7 +11,7 @@ export default defineConfig({
   fullyParallel:false,
 
   use:{
-    headless:false,
+    headless:true,
     screenshot:'on',
     trace:'on'
   },
