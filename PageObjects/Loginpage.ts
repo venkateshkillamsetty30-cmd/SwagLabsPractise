@@ -1,12 +1,12 @@
-import { Page, Locator , expect } from '@playwright/test';
+import { Page, Locator , expect , context} from '@playwright/test';
 
 export class Loginpage {
 
   page: Page;
-  username: Locator;
-  password: Locator;
-  loginButton: Locator;
-  errormsg:Locator;
+   username: Locator;
+   password: Locator;
+   loginButton: Locator;
+   errormsg:Locator;
 
     constructor(page:Page){
         this.page = page;
@@ -24,6 +24,7 @@ export class Loginpage {
         await this.username.fill(username);
         await this.password.fill(password);
         await this.loginButton.click();
+       
 
     }
 

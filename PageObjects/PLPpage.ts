@@ -9,7 +9,7 @@ export class PLPpage {
 
     constructor(page:Page){
         this.page = page;
-        this.SauceLabsBackpack = page.locator('#add-to-cart-sauce-labs-backpack');
+        this.SauceLabsBackpack = page.locator('button#add-to-cart-sauce-labs-backpack')
         this.Cartlink = page.locator('.shopping_cart_link')
 
     }

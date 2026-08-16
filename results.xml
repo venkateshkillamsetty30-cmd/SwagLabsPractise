@@ -1,87 +1,170 @@
-<testsuites id="" name="" tests="9" failures="0" skipped="0" errors="0" time="27.322338">
-<testsuite name="login.spec.ts" timestamp="2026-07-24T06:53:54.335Z" hostname="Desktop Chrome" tests="3" failures="0" skipped="0" time="18.518" errors="0">
-<testcase name="@LogintestwithCsv Login with standard_user" classname="login.spec.ts" time="6.551">
+<testsuites id="" name="" tests="7" failures="0" skipped="0" errors="3" time="10.025229999999999">
+<testsuite name="CartCheckout.spec.ts" timestamp="2026-07-24T12:52:41.871Z" hostname="Desktop Safari" tests="1" failures="0" skipped="0" time="3.848" errors="1">
+<testcase name="Checkout and Complete Order" classname="CartCheckout.spec.ts" time="3.848">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-standard-user-Desktop-Chrome\test-finished-1.png]]
+[[ATTACHMENT|test-results\CartCheckout-Checkout-and-Complete-Order-Desktop-Safari\error-context.md]]
 
-[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-standard-user-Desktop-Chrome\trace.zip]]
+[[ATTACHMENT|test-results\CartCheckout-Checkout-and-Complete-Order-Desktop-Safari\trace.zip]]
 ]]>
 </system-out>
-</testcase>
-<testcase name="@LogintestwithCsv Login with locked_out_user" classname="login.spec.ts" time="5.769">
-<system-out>
-<![CDATA[
-[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-locked-out-user-Desktop-Chrome\test-finished-1.png]]
+<error message="page.goto: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [Desktop Safari] › CartCheckout.spec.ts:6:5 › Checkout and Complete Order ────────────────────────
 
-[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-locked-out-user-Desktop-Chrome\trace.zip]]
-]]>
-</system-out>
-</testcase>
-<testcase name="@LogintestwithCsv Login with problem_user" classname="login.spec.ts" time="6.198">
-<system-out>
-<![CDATA[
-[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-problem-user-Desktop-Chrome\test-finished-1.png]]
+    Error: page.goto: Target page, context or browser has been closed
 
-[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-problem-user-Desktop-Chrome\trace.zip]]
-]]>
-</system-out>
-</testcase>
-</testsuite>
-<testsuite name="login.spec.ts" timestamp="2026-07-24T06:53:54.335Z" hostname="Desktop Firefox" tests="3" failures="0" skipped="0" time="48.867" errors="0">
-<testcase name="@LogintestwithCsv Login with standard_user" classname="login.spec.ts" time="6.69">
-<system-out>
-<![CDATA[
-[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-standard-user-Desktop-Firefox\test-finished-1.png]]
+       at ..\PageObjects\Loginpage.ts:20
 
-[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-standard-user-Desktop-Firefox\trace.zip]]
-]]>
-</system-out>
-</testcase>
-<testcase name="@LogintestwithCsv Login with locked_out_user" classname="login.spec.ts" time="22.275">
-<system-out>
-<![CDATA[
-[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-locked-out-user-Desktop-Firefox\test-finished-1.png]]
+      18 |     }
+      19 |     async goTO(url:string){
+    > 20 |         await this.page.goto(url)
+         |                         ^
+      21 |     }
+      22 |
+      23 |     async validlogin(username:string, password:string){
+        at Loginpage.goTO (C:\Users\admin\SwagLabsPractise\PageObjects\Loginpage.ts:20:25)
+        at Object.loggedInPage (C:\Users\admin\SwagLabsPractise\fixtures\pages.fixture.ts:15:17)
 
-[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-locked-out-user-Desktop-Firefox\trace.zip]]
-]]>
-</system-out>
-</testcase>
-<testcase name="@LogintestwithCsv Login with problem_user" classname="login.spec.ts" time="19.902">
-<system-out>
-<![CDATA[
-[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-problem-user-Desktop-Firefox\test-finished-1.png]]
+    Error: locator.click: Target page, context or browser has been closed
 
-[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-problem-user-Desktop-Firefox\trace.zip]]
+       at ..\PageObjects\Cartpage.ts:28
+
+      26 |
+      27 |     async CheckoutCart(){
+    > 28 |         await this.Checkout.click();
+         |                             ^
+      29 |         await this.firstname.fill("Venkatesh");
+      30 |         await this.lastname.fill("venky");
+      31 |         await this.zipcode.fill("530007");
+        at Cartpage.CheckoutCart (C:\Users\admin\SwagLabsPractise\PageObjects\Cartpage.ts:28:29)
+        at C:\Users\admin\SwagLabsPractise\tests\CartCheckout.spec.ts:11:18
+
+    Error Context: ..\test-results\CartCheckout-Checkout-and-Complete-Order-Desktop-Safari\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\CartCheckout-Checkout-and-Complete-Order-Desktop-Safari\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\CartCheckout-Checkout-and-Complete-Order-Desktop-Safari\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>
-</system-out>
+</error>
 </testcase>
 </testsuite>
-<testsuite name="login.spec.ts" timestamp="2026-07-24T06:53:54.335Z" hostname="Desktop Safari" tests="3" failures="0" skipped="0" time="13.261" errors="0">
-<testcase name="@LogintestwithCsv Login with standard_user" classname="login.spec.ts" time="4.562">
+<testsuite name="login.spec.ts" timestamp="2026-07-24T12:52:41.871Z" hostname="Desktop Safari" tests="5" failures="0" skipped="0" time="31.183" errors="2">
+<testcase name="@LogintestwithCsv Login with standard_user" classname="login.spec.ts" time="6.683">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-standard-user-Desktop-Safari\test-finished-1.png]]
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-standard-user-Desktop-Safari\error-context.md]]
 
 [[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-standard-user-Desktop-Safari\trace.zip]]
 ]]>
 </system-out>
+<error message="page.goto: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [Desktop Safari] › login.spec.ts:19:5 › @LogintestwithCsv Login with standard_user ───────────────
+
+    Error: page.goto: Target page, context or browser has been closed
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\PageObjects\Loginpage.ts:20
+
+      18 |     }
+      19 |     async goTO(url:string){
+    > 20 |         await this.page.goto(url)
+         |                         ^
+      21 |     }
+      22 |
+      23 |     async validlogin(username:string, password:string){
+        at Loginpage.goTO (C:\Users\admin\SwagLabsPractise\PageObjects\Loginpage.ts:20:25)
+        at C:\Users\admin\SwagLabsPractise\tests\login.spec.ts:22:19
+
+    Error Context: ..\test-results\login--LogintestwithCsv-Login-with-standard-user-Desktop-Safari\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\login--LogintestwithCsv-Login-with-standard-user-Desktop-Safari\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\login--LogintestwithCsv-Login-with-standard-user-Desktop-Safari\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
 </testcase>
-<testcase name="@LogintestwithCsv Login with locked_out_user" classname="login.spec.ts" time="4.332">
+<testcase name="@LogintestwithCsv Login with locked_out_user" classname="login.spec.ts" time="3.75">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-locked-out-user-Desktop-Safari\test-finished-1.png]]
+[[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-locked-out-user-Desktop-Safari\error-context.md]]
 
 [[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-locked-out-user-Desktop-Safari\trace.zip]]
 ]]>
 </system-out>
+<error message="page.goto: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [Desktop Safari] › login.spec.ts:19:5 › @LogintestwithCsv Login with locked_out_user ─────────────
+
+    Error: page.goto: Target page, context or browser has been closed
+
+       at ..\PageObjects\Loginpage.ts:20
+
+      18 |     }
+      19 |     async goTO(url:string){
+    > 20 |         await this.page.goto(url)
+         |                         ^
+      21 |     }
+      22 |
+      23 |     async validlogin(username:string, password:string){
+        at Loginpage.goTO (C:\Users\admin\SwagLabsPractise\PageObjects\Loginpage.ts:20:25)
+        at C:\Users\admin\SwagLabsPractise\tests\login.spec.ts:22:19
+
+    Error Context: ..\test-results\login--LogintestwithCsv-Login-with-locked-out-user-Desktop-Safari\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\login--LogintestwithCsv-Login-with-locked-out-user-Desktop-Safari\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\login--LogintestwithCsv-Login-with-locked-out-user-Desktop-Safari\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
 </testcase>
-<testcase name="@LogintestwithCsv Login with problem_user" classname="login.spec.ts" time="4.367">
+<testcase name="@LogintestwithCsv Login with problem_user" classname="login.spec.ts" time="6.553">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-problem-user-Desktop-Safari\test-finished-1.png]]
 
 [[ATTACHMENT|test-results\login--LogintestwithCsv-Login-with-problem-user-Desktop-Safari\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="@LogintestwithJson validuser Login with standard_user" classname="login.spec.ts" time="6.768">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\login--LogintestwithJson-validuser-Login-with-standard-user-Desktop-Safari\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\login--LogintestwithJson-validuser-Login-with-standard-user-Desktop-Safari\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="@LogintestwithTSObject Invalid Login test" classname="login.spec.ts" time="7.429">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\login--LogintestwithTSObject-Invalid-Login-test-Desktop-Safari\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\login--LogintestwithTSObject-Invalid-Login-test-Desktop-Safari\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="plp.spec.ts" timestamp="2026-07-24T12:52:41.871Z" hostname="Desktop Safari" tests="1" failures="0" skipped="0" time="4.218" errors="0">
+<testcase name="Add Product to Cart" classname="plp.spec.ts" time="4.218">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\plp-Add-Product-to-Cart-Desktop-Safari\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\plp-Add-Product-to-Cart-Desktop-Safari\trace.zip]]
 ]]>
 </system-out>
 </testcase>
