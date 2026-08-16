@@ -2,7 +2,6 @@ import { test, expect } from '@playwright/test';
 import {Loginpage} from '../PageObjects/Loginpage';
 import {loginDataTS} from '../testdata/loginData';
 import loginData from '../testdata/loginData.json';
-import { CurrentEnv } from '../configs/env';
 import path from 'path';
 import { readCSV } from '../utils/csvReader';
 import {loginTest} from '../fixtures/datafixture'
