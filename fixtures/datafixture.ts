@@ -1,13 +1,13 @@
 import { test as base } from '@playwright/test';
 
-type LoginData = {
+type LogintestData = {
   username: string;
   password: string;
   baseurl: string;
 };
 
-export const logintestdata = base.extend<{LoginData:LoginData}>({
-  LoginData: async({},use)=>{
+export const logintestdata = base.extend<{LoginData:LogintestData}>({
+  LogintestData: async({},use)=>{
 
     console.log("Before test");
 

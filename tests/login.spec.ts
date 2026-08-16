@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import {Loginpage} from '../PageObjects/Loginpage';
 import {loginDataTS} from '../testdata/loginData';
-import logindata from '../testdata/loginData.json';
+import loginData from '../testdata/loginData.json';
 import { CurrentEnv } from '../configs/env';
 import path from 'path';
 import { readCSV } from '../utils/csvReader';
@@ -26,11 +26,11 @@ test(`@LogintestwithCsv Login with ${data.Username}`, async ({ page }) => {
 })
 };
 
-test(`@LogintestwithJson validuser Login with ${logindata.validUser.username}`, async ({ page }) => {
+test(`@LogintestwithJson validuser Login with ${loginData.validUser.username}`, async ({ page }) => {
 
   const loginpage  = new Loginpage(page);
-  await loginpage.goTO(logindata.validUser.baseURL);
-  await loginpage.validlogin(logindata.validUser.username, logindata.validUser.password);
+  await loginpage.goTO(loginData.validUser.baseURL);
+  await loginpage.validlogin(loginData.validUser.username, loginData.validUser.password);
   await loginpage.verfiyPageURL();
 })
 
@@ -46,11 +46,11 @@ test('@LogintestwithTSObject Invalid Login test', async ({ page }) => {
 
 
 
-logintestdata(`@Logintest use data from fixture`, async ({ page,LoginData,context }) => {
+logintestdata(`@Logintest use data from fixture`, async ({ page,logintestdata,context }) => {
 
   const loginpage  = new Loginpage(page);
-  await loginpage.goTO(LoginData.baseurl);
-  await loginpage.validlogin(LoginData.username, LoginData.password);
+  await loginpage.goTO(logintestdata.baseurl);
+  await loginpage.validlogin(logintestdata.username, logintestdata.password);
   await loginpage.verfiyPageURL();
   
 
