@@ -16,7 +16,7 @@ const logintestData = readCSV(
 
 for (const data of logintestData) {
 
-
+//this test will use the data from the CSV file and will run the test with that data.
 test(`@LogintestwithCsv Login with ${data.Username}`, async ({ page }) => {
 
   const loginpage = new Loginpage(page);
@@ -26,6 +26,7 @@ test(`@LogintestwithCsv Login with ${data.Username}`, async ({ page }) => {
 })
 };
 
+//this test will use the data from the JSON file and will run the test with that data.
 test(`@LogintestwithJson validuser Login with ${loginData.validUser.username}`, async ({ page }) => {
 
   const loginpage  = new Loginpage(page);
@@ -34,7 +35,7 @@ test(`@LogintestwithJson validuser Login with ${loginData.validUser.username}`, 
   await loginpage.verfiyPageURL();
 })
 
-
+//this test will use the data from the TS object file and will run the test with that data.
 
 test('@LogintestwithTSObject Invalid Login test', async ({ page }) => {
 
@@ -44,7 +45,7 @@ test('@LogintestwithTSObject Invalid Login test', async ({ page }) => {
 
 });
 
-
+//this is a custom test with custom fixture which is defined in fixtures/datafixture.ts file. This test will use the data from the fixture and will run the test with that data.
 
 loginTest('use data from fixture', async ({ page, logindata }) => {
 
