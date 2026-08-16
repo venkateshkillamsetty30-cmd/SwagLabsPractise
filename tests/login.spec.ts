@@ -5,7 +5,7 @@ import loginData from '../testdata/loginData.json';
 import { CurrentEnv } from '../configs/env';
 import path from 'path';
 import { readCSV } from '../utils/csvReader';
-import {logintestdata} from '../fixtures/datafixture'
+import {loginTest} from '../fixtures/datafixture'
 
 
 
@@ -46,12 +46,10 @@ test('@LogintestwithTSObject Invalid Login test', async ({ page }) => {
 
 
 
-logintestdata(`@Logintest use data from fixture`, async ({ page,logintestdata,context }) => {
+loginTest('use data from fixture', async ({ page, logindata }) => {
 
   const loginpage  = new Loginpage(page);
-  await loginpage.goTO(logintestdata.baseurl);
-  await loginpage.validlogin(logintestdata.username, logintestdata.password);
+  await loginpage.goTO(logindata.baseurl);
+  await loginpage.validlogin(logindata.username, logindata.password);
   await loginpage.verfiyPageURL();
-  
-
 })
