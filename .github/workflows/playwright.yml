@@ -6,7 +6,9 @@ on:
     branches: [ main, master ]
 
   schedule:
-    - cron: '3,13,23,33,43,53 * * * *' # every 10 minutes   
+  - cron: '*/10 * * * *'
+    timezone: 'Asia/Kolkata'
+    
 jobs:
   test:
     timeout-minutes: 60
